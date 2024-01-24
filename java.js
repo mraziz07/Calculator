@@ -1,5 +1,8 @@
 const display = document.querySelector(".display");
 const backSpace = document.querySelector(".back-btn");
+const darkMode = document.querySelector("#dark-mode");
+const darkMsg = document.querySelector("#darkmsg");
+const historyDisplay = document.querySelector(".history-display");
 
 //For displaying Input
 function appendToDisplay(input) {
@@ -24,6 +27,17 @@ const calculate = () => {
         display.value = "ERROR";
     }
 }
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++
+//darkmode
+darkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-color');
+    const darkModeCheck = document.body.classList.contains('dark-color');
+    darkMsg.innerText = darkModeCheck ? "Light M" : "Dark M"
+    darkMsg.style.color = darkModeCheck ? "white" : "black"
+    historyDisplay.style.color = darkModeCheck ? "white" : "grey"
+})
+// ++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 

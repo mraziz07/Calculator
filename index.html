@@ -10,13 +10,16 @@
     <div class="container">
         <div class="calculator">
             <div class="output">
-              <div class="history-display">+5</div>
+              <div class="history-display">00</div>
               <!-- <div class="Current-output">11</div> -->
               <input type="text" class="display" readonly>
             </div>
-            <div class="backspace-section"><img class = "back-btn" src="back.png" alt=""></div>
+            <div class="backspace-section">
+              <span id="dark-mode"><p id="darkmsg">Dark M</p></span>
+              <img class = "back-btn" src="back.png" alt="">
+            </div>
             <div class="button-grids">
-              <button onclick="clearDisplay()" class="span-2">AC</button>
+              <button onclick="clearDisplay()" class="all-clear">AC</button>
               <button onclick="appendToDisplay('%')" class="operator-col">%</button>
               <button onclick="appendToDisplay('/')" class="operator-col">/</button>
               <button onclick="appendToDisplay('1')" class="f-size">1</button>
