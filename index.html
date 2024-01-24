@@ -14,26 +14,26 @@
               <!-- <div class="Current-output">11</div> -->
               <input type="text" class="display" readonly>
             </div>
-            <div class="backspace-section"><img src="back.png" alt=""></div>
+            <div class="backspace-section"><img class = "back-btn" src="back.png" alt=""></div>
             <div class="button-grids">
-              <button class="span-2">AC</button>
-              <button class="operator-col">%</button>
-              <button class="operator-col">/</button>
-              <button class="f-size">1</button>
-              <button class="f-size">2</button>
-              <button class="f-size">3</button>
-              <button class="operator-col">*</button>
-              <button class="f-size">4</button>
-              <button class="f-size">5</button>
-              <button class="f-size">6</button>
-              <button class="operator-col">-</button>
-              <button class="f-size">7</button>
-              <button class="f-size">8</button>
-              <button class="f-size">9</button>
-              <button class="operator-col">+</button>
-              <button class="operator-col">.</button>
-              <button class="f-size">0</button>
-              <button class="span2 operator-col">=</button>
+              <button onclick="clearDisplay()" class="span-2">AC</button>
+              <button onclick="appendToDisplay('%')" class="operator-col">%</button>
+              <button onclick="appendToDisplay('/')" class="operator-col">/</button>
+              <button onclick="appendToDisplay('1')" class="f-size">1</button>
+              <button onclick="appendToDisplay('2')" class="f-size">2</button>
+              <button onclick="appendToDisplay('3')" class="f-size">3</button>
+              <button onclick="appendToDisplay('*')" class="operator-col">*</button>
+              <button onclick="appendToDisplay('4')" class="f-size">4</button>
+              <button onclick="appendToDisplay('5')" class="f-size">5</button>
+              <button onclick="appendToDisplay('6')" class="f-size">6</button>
+              <button onclick="appendToDisplay('-')" class="operator-col">-</button>
+              <button onclick="appendToDisplay('7')" class="f-size">7</button>
+              <button onclick="appendToDisplay('8')" class="f-size">8</button>
+              <button onclick="appendToDisplay('9')" class="f-size">9</button>
+              <button onclick="appendToDisplay('+')" class="operator-col">+</button>
+              <button onclick="appendToDisplay('.')" class="operator-col">.</button>
+              <button onclick="appendToDisplay('0')" class="f-size">0</button>
+              <button onclick="calculate()" class="span2 operator-col">=</button>
              </div>
           </div>
     </div>
