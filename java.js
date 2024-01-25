@@ -1,43 +1,38 @@
-const display = document.querySelector(".display");
-const backSpace = document.querySelector(".back-btn");
-const darkMode = document.querySelector("#dark-mode");
-const darkMsg = document.querySelector("#darkmsg");
-const historyDisplay = document.querySelector(".history-display");
+const display = document.querySelector('.display');
+const darkMode = document.querySelector('#dark-mode');
+const darkModeInput = document.querySelector('#mode-name');
+const body = document.body;
+const historyDisplay = document.querySelector('.history-display');
 
-//For displaying Input
+// Input Display;
 function appendToDisplay(input) {
     display.value += input;
 }
 
-//AC button
-const clearDisplay = () => {
+//For all clear button;
+function clearDisplay() {
     display.value = "";
 }
 
-//backspace button
-backSpace.addEventListener('click', () => {
-    display.value = display.value.slice(0, -1);
-})
+//For Backspace button;
+function backSpaceBtn() {
+    display.value = display.value.slice(0,-1);
+}
 
-//Calculation
+//For calculation;
 const calculate = () => {
     try{
-        display.value = eval(display.value)
-    } catch(error){
-        display.value = "ERROR";
+        display.value = eval(display.value);
+    } catch(error) {
+        display.value = "Error";
     }
 }
 
-// ++++++++++++++++++++++++++++++++++++++++++++++++
-//darkmode
+//Dark Mode;
 darkMode.addEventListener('click', () => {
-    document.body.classList.toggle('dark-color');
-    const darkModeCheck = document.body.classList.contains('dark-color');
-    darkMsg.innerText = darkModeCheck ? "Light M" : "Dark M"
-    darkMsg.style.color = darkModeCheck ? "#d8d8d8" : "black"
-    historyDisplay.style.color = darkModeCheck ? "#d8d8d8" : "grey"
+    body.classList.toggle('dark-color'); //Darkmode switching;
+    const darkModeCheck = body.classList.contains('dark-color');
+    darkModeInput.innerHTML = darkModeCheck ? "Light M" : "Dark M"
+    darkModeInput.style.color = darkModeCheck ? "#d8d8d8" : "grey"
+    historyDisplay.style.color =  darkModeCheck ? "#d8d8d8" : "grey"
 })
-// ++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
