@@ -43,6 +43,7 @@
     transform: translate(-50%, -50%);
     border-radius: 10px;
     border: 1px solid #2A324B;
+    min-width: 330px;
 }
 
 .output{
@@ -63,6 +64,7 @@
     font-size: 1rem;
     border-radius: 3px;
     padding: 0px 10px;
+    color: grey;
 }
 
 .display{
@@ -74,6 +76,7 @@
     border: none;
     text-align: right;
     font-size: 25px;
+    width: 100%;
 }
 
 .display:focus {
@@ -111,7 +114,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .button-grids{
     display: grid;
-    grid-template-columns: repeat(4,80px);
+    grid-template-columns: repeat(4,auto);
     grid-template-rows: repeat(5,70px);
     gap: 5px;
 }
@@ -147,4 +150,15 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     transition: background-color 0.3s ease;
     cursor: pointer;
+}
+
+
+
+/* -------------- Media Queries ------------------ */
+
+@media only screen and (max-width: 700px) {
+    .button-grids{
+        grid-template-rows: repeat(5,60px);
+    }
+    
 }

@@ -34,8 +34,8 @@ darkMode.addEventListener('click', () => {
     document.body.classList.toggle('dark-color');
     const darkModeCheck = document.body.classList.contains('dark-color');
     darkMsg.innerText = darkModeCheck ? "Light M" : "Dark M"
-    darkMsg.style.color = darkModeCheck ? "white" : "black"
-    historyDisplay.style.color = darkModeCheck ? "white" : "grey"
+    darkMsg.style.color = darkModeCheck ? "#d8d8d8" : "black"
+    historyDisplay.style.color = darkModeCheck ? "#d8d8d8" : "grey"
 })
 // ++++++++++++++++++++++++++++++++++++++++++++++++
 
